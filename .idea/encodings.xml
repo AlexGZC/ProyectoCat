@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/es/app/alexandercontreras/proyectocat/IntroApp/ActividadIntro.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/es/app/alexandercontreras/proyectocat/IntroApp/GestorpreferenciasIntro.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/welcome_slide1.xml" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/welcome_slide2.xml" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/welcome_slide3.xml" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/welcome_slide4.xml" charset="ISO-8859-1" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

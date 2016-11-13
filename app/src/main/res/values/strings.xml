@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Turismo ESA</string>
+    <string name="title_activity_maps">Turismo ESA</string>
+    <string name="inicio">Inicio</string>
+    <string name="playa">Playas</string>
+    <string name="parque">Parques</string>
+    <string name="Museos">Museos</string>
+    <string name="inser">Registrar Lugar</string>
+    <string name="mun">Buscar un lugar</string>
+
+    <string name="title_activity_welcome">BIENVENIDOS</string>
+    <string name="next">SIGUIENTE</string>
+    <string name="skip">SALTAR</string>
+    <string name="start">COMENZAR</string>
+
+    <string name="slide_1_title">Turismo ESA</string>
+    <string name="slide_1_desc">Conozca la ubicacion de los mejores sitios del país</string>
+
+    <string name="slide_2_title">Mapas</string>
+    <string name="slide_2_desc">Recuerda que debes tener acceso a internet</string>
+
+    <string name="slide_3_title">Tus favoritos</string>
+    <string name="slide_3_desc">Puedes agregar tus sitios favoritos en el mapa, solo debes mantener presionada la pantalla
+    en la seccion del mapa que desees y se mostrata un marcador distintivo para tu sitio</string>
+
+    <string name="slide_4_title">Secciones</string>
+    <string name="slide_4_desc">Playas,parques,museos. Todo en nuestro país.</string>
+
+    <string name="play_again_desc"></string>
+    <string name="play_again">Mostrar de nuevo</string>
+
+    <string-array name="list_map_type">
+        <item>La Libertad</item>
+        <item>San Salvador</item>
+        <item>Santa Ana</item>
+    </string-array>
+
+    <string name="title_activity_network_gallery">NetworkGalleryActivity</string>
+    <string name="title_activity_sd_card_gallery">SdCardGalleryActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

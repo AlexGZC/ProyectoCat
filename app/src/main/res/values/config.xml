@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string
+     name="places_url">https://raw.githubusercontent.com/AlexGZC/Guia4/master/mapa.json</string>
+ <string
+     name="places_image_url">
+  <![CDATA[
+  http://wssitiosudb.com/wssitios/Lugares/resultado/generar?filtro=tipo&tipo=1
+]]>
+  </string>
+
+</resources>

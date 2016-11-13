@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.app.alexandercontreras.proyectocat">
+
+    <permission
+        android:name="in.wptrafficanalyzer.locationmarkersqlite.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="in.wptrafficanalyzer.locationmarkersqlite.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/iconos"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".IntroApp.ActividadIntro"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MenuActivity" />
+        <activity android:name=".activity.MapsActivity" />
+        <activity android:name=".activity.MapsActivity2" />
+        <activity android:name=".activity.MapsActivity3" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.InsertLugar" />
+
+        <provider
+            android:name=".Places.LocationsContentProvider"
+            android:authorities="in.wptrafficanalyzer.locationmarkersqlite.locations"
+            android:exported="false" />
+
+        <activity android:name=".EjemploActivity"></activity>
+        <activity android:name=".RecyclerMenu.MainActivity"/>
+        <activity android:name=".activity.municipios.Sansalvador"/>
+        <activity android:name=".activity.municipios.LaLibertad"/>
+        <activity android:name=".activity.municipios.Chalate"/>
+        <activity android:name=".activity.municipios.Cusca"/>
+        <activity android:name=".activity.municipios.SanVicente"/>
+        <activity android:name=".activity.municipios.LaPaz"/>
+        <activity android:name=".activity.municipios.Cabanas"/>
+        <activity android:name=".activity.municipios.Ahuachapan"/>
+        <activity android:name=".activity.municipios.Sonsonate"/>
+        <activity android:name=".activity.municipios.SantaAna"/>
+        <activity android:name=".activity.municipios.Usulutan"/>
+        <activity android:name=".activity.municipios.SanMiguel"/>
+        <activity android:name=".activity.municipios.Morazan"/>
+        <activity android:name=".activity.municipios.LaUnion"/>
+
+<activity android:name="activityimg.MainActivity" />
+
+</application>
+
+
+</manifest>
