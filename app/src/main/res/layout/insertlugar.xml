@@ -13,11 +13,11 @@
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".activity.InsertLugar">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="¿Deseas colabrorar? Ingresa los datos de un sitio de sugerencia"
+        android:text="¿Deseas agregar tu negocio?"
         android:textColor="#fff"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -33,7 +33,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre del sitio:"
+            android:hint="Nombre negocio:"
             android:id="@+id/edt1" />
     </android.support.design.widget.TextInputLayout>
 
@@ -70,7 +70,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Calificacion del lugar"
+        android:hint="Calificacion del negocio"
         android:maxLength="1"
         android:inputType="number"
         android:id="@+id/edt4" />
@@ -83,7 +83,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripcion del lugar"
+        android:hint="Descripcion del negocio"
         android:maxLength="100"
         android:id="@+id/edt5" />
     </android.support.design.widget.TextInputLayout>
@@ -119,7 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="Tipo de lugar: 1.Playa, 2.Parque, 3.Museo"
+        android:hint="Tipo de lugar: 4.Negocio"
         android:id="@+id/edt7"
         android:maxLength="1"/>
 </android.support.design.widget.TextInputLayout>

@@ -10,6 +10,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.pushbots.push.Pushbots;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
@@ -18,8 +19,10 @@ import es.app.alexandercontreras.proyectocat.fragmentos.Buscarmun;
 import es.app.alexandercontreras.proyectocat.fragmentos.Forminsertar;
 import es.app.alexandercontreras.proyectocat.fragmentos.HomeFragment;
 import es.app.alexandercontreras.proyectocat.fragmentos.Museo;
+import es.app.alexandercontreras.proyectocat.fragmentos.Nego;
 import es.app.alexandercontreras.proyectocat.fragmentos.Parques;
 import es.app.alexandercontreras.proyectocat.fragmentos.Playa;
+import es.app.alexandercontreras.proyectocat.fragmentos.Valoracion;
 
 public class MenuActivity extends FragmentActivity implements View.OnClickListener{
 
@@ -31,11 +34,15 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
     private ResideMenuItem museoo;
     private ResideMenuItem inser;
     private ResideMenuItem buscarmun;
+    private ResideMenuItem neg;
+    private ResideMenuItem star;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Pushbots.sharedInstance().init(this);
         mContext = this;
         setUpMenu();
         if( savedInstanceState == null )
@@ -58,23 +65,30 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         // create menu items;
         inicio = new ResideMenuItem(this, R.drawable.icon_home,     R.string.inicio);
         playa = new ResideMenuItem(this, R.drawable.playa,  R.string.playa);
-        parques = new ResideMenuItem(this, R.drawable.parque, R.string.parque);
-        museoo = new ResideMenuItem(this, R.drawable.museo, R.string.Museos);
-        buscarmun = new ResideMenuItem(this, R.drawable.places_ic_search, R.string.mun);
-        inser = new ResideMenuItem(this, R.drawable.ic_setting_light, R.string.inser);
+        parques = new ResideMenuItem(this, R.drawable.ic_park, R.string.parque);
+        museoo = new ResideMenuItem(this, R.drawable.ic_museo, R.string.Museos);
+        buscarmun = new ResideMenuItem(this, R.drawable.ic_search, R.string.mun);
+        inser = new ResideMenuItem(this, R.drawable.ic_list, R.string.inser);
+        neg = new ResideMenuItem(this, R.drawable.ic_negocio, R.string.neg);
+        star = new ResideMenuItem(this, R.drawable.ic_start, R.string.star);
+
+        neg.setOnClickListener(this);
         inicio.setOnClickListener(this);
         playa.setOnClickListener(this);
         parques.setOnClickListener(this);
         museoo.setOnClickListener(this);
         inser.setOnClickListener(this);
         buscarmun.setOnClickListener(this);
+        star.setOnClickListener(this);
 
         resideMenu.addMenuItem(inicio, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(playa, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(parques, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(museoo, ResideMenu.DIRECTION_LEFT);
-        resideMenu.addMenuItem(buscarmun, ResideMenu.DIRECTION_LEFT);
+        resideMenu.addMenuItem(buscarmun, ResideMenu.DIRECTION_RIGHT);
         resideMenu.addMenuItem(inser, ResideMenu.DIRECTION_RIGHT);
+        resideMenu.addMenuItem(neg, ResideMenu.DIRECTION_LEFT);
+        resideMenu.addMenuItem(star, ResideMenu.DIRECTION_LEFT);
 
         //direccion
         findViewById(R.id.title_bar_left_menu).setOnClickListener(new View.OnClickListener() {
@@ -111,7 +125,12 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
             changeFragment(new Forminsertar());
         }else if (view == buscarmun){
             changeFragment(new Buscarmun());
+        }else if (view == neg){
+            changeFragment(new Nego());
+        }else if (view == star){
+            changeFragment(new Valoracion());
         }
+
 
 
         resideMenu.closeMenu();
@@ -153,7 +172,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
                 builder
                         .setTitle("Salir de Turismo ESA")
                         .setMessage("Desa realizar esta acción?")
-                        .setIcon(R.mipmap.ic_launcher)
+                        .setIcon(R.mipmap.iconos)
                         .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 System.exit(0);

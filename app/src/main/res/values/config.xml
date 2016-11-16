@@ -9,4 +9,6 @@
 ]]>
   </string>
 
+ <string name="url_json">http://www.wssitiosudb.com/wssitios/Lugares/resultado/generar.php</string>
+
 </resources>
