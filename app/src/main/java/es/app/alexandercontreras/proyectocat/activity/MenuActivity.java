@@ -18,6 +18,7 @@ import es.app.alexandercontreras.proyectocat.R;
 import es.app.alexandercontreras.proyectocat.fragmentos.Buscarmun;
 import es.app.alexandercontreras.proyectocat.fragmentos.Forminsertar;
 import es.app.alexandercontreras.proyectocat.fragmentos.HomeFragment;
+import es.app.alexandercontreras.proyectocat.fragmentos.Logueo;
 import es.app.alexandercontreras.proyectocat.fragmentos.Museo;
 import es.app.alexandercontreras.proyectocat.fragmentos.Nego;
 import es.app.alexandercontreras.proyectocat.fragmentos.Parques;
@@ -36,6 +37,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
     private ResideMenuItem buscarmun;
     private ResideMenuItem neg;
     private ResideMenuItem star;
+    private ResideMenuItem login;
 
 
     @Override
@@ -71,6 +73,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         inser = new ResideMenuItem(this, R.drawable.ic_list, R.string.inser);
         neg = new ResideMenuItem(this, R.drawable.ic_negocio, R.string.neg);
         star = new ResideMenuItem(this, R.drawable.ic_start, R.string.star);
+        login = new ResideMenuItem(this, R.drawable.ic_facebook, R.string.log);
 
         neg.setOnClickListener(this);
         inicio.setOnClickListener(this);
@@ -80,6 +83,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         inser.setOnClickListener(this);
         buscarmun.setOnClickListener(this);
         star.setOnClickListener(this);
+        login.setOnClickListener(this);
 
         resideMenu.addMenuItem(inicio, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(playa, ResideMenu.DIRECTION_LEFT);
@@ -89,6 +93,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         resideMenu.addMenuItem(inser, ResideMenu.DIRECTION_RIGHT);
         resideMenu.addMenuItem(neg, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(star, ResideMenu.DIRECTION_LEFT);
+        resideMenu.addMenuItem(login, ResideMenu.DIRECTION_RIGHT);
 
         //direccion
         findViewById(R.id.title_bar_left_menu).setOnClickListener(new View.OnClickListener() {
@@ -129,6 +134,8 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
             changeFragment(new Nego());
         }else if (view == star){
             changeFragment(new Valoracion());
+        }else if (view == login){
+            changeFragment(new Logueo());
         }
 
 

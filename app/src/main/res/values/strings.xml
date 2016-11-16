@@ -9,6 +9,7 @@
     <string name="star">Valoracion</string>
     <string name="inser">Registrar Lugar</string>
     <string name="mun">Buscar un lugar</string>
+    <string name="log">Iniciar con Facebook</string>
 
     <string name="title_activity_welcome">BIENVENIDOS</string>
     <string name="next">SIGUIENTE</string>
